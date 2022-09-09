@@ -14,8 +14,11 @@ app.set('view engine', 'ejs');
 
                             /* RUTAS */
 
-app.get('/', (req,res) => res.sendFile(path.resolve(__dirname,'views','home.html')));
-app.get('/about', (req,res) => res.sendFile(path.resolve(__dirname,'views','about.html')));
+const mainRouter = require('./routes/main');
+
+app.use('/', mainRouter)
+/* app.get('/', (req,res) => res.sendFile(path.resolve(__dirname,'views','home.html')));
+app.get('/about', (req,res) => res.sendFile(path.resolve(__dirname,'views','about.html'))); */
 
 
 

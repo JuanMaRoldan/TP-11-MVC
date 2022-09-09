@@ -1,6 +1,6 @@
 let mainController = {
-    index: (req,res) => {
-        return res.render('index')
+    home: (req,res) => {
+        return res.render('home')
     },
     about: (req,res) => {
         return res.render('about')
